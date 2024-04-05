@@ -42,7 +42,3 @@
 .color-card__hex {
   color: #75757b;
 }
-.color-list {
-  display: grid;
-  gap: 0.5rem;
-}
