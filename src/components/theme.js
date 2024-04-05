@@ -1,8 +1,8 @@
 import "./Theme.css";
-import ColorList from "./ColorCard";
 import ThemePreview from "./ThemePreview";
 import { useState } from "react";
 import { IconChevronDown, IconChevronUp } from "@tabler/icons-react";
+import { ColorList } from "./ColorList";
 
 export default function Theme({ name, colors }) {
   const [showDetails, setShowDetails] = useState(false);
