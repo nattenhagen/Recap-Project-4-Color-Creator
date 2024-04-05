@@ -1,0 +1,26 @@
+.header {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 10vh 0.5rem 0.5rem;
+}
+
+.main-container {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 0 0.5rem 2rem;
+}
+
+.theme-title {
+  font-size: 3rem;
+}
+
+.theme-list {
+  display: grid;
+  gap: 3rem;
+}
+
+.color-list {
+  display: grid;
+  gap: 0.5rem;
+  list-style: none;
+}

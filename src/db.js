@@ -1,3 +1,4 @@
+// List of themes
 export const themes = [
   {
     id: "0",
