@@ -41,4 +41,5 @@
 
 .color-card__hex {
   color: #75757b;
+  list-style: none;
 }

@@ -1,4 +1,8 @@
 import "./AddTheme.css";
+import { v4 as uuid } from "uuid";
+
+const randomId = uuid();
+
 export function AddTheme({ themes, addTheme }) {
   function onSubmit(e) {
     e.preventDefault();
@@ -10,7 +14,7 @@ export function AddTheme({ themes, addTheme }) {
     const color4 = e.target.elements.color4.value;
 
     const newTheme = {
-      id: themeName,
+      id: randomId,
       name: themeName,
       colors: [
         {
@@ -43,27 +47,21 @@ export function AddTheme({ themes, addTheme }) {
   return (
     <form className="formTheme" onSubmit={onSubmit}>
       <h3>Add a Theme</h3>
-      <div className="formWrapper">
-        <div>
-          <label htmlFor="theme-name"> Name </label>
-          <input required type="text" name="themeName" id="theme-name" />
-        </div>
-        <div>
-          <label htmlFor="color-1"> Primary </label>
-          <input required type="color" name="color1" id="color1" />
-        </div>
-        <div>
-          <label htmlFor="color2"> Secondary </label>
-          <input required type="color" name="color2" id="color2" />
-        </div>
-        <div>
-          <label htmlFor="color3"> Surface </label>
-          <input required type="color" name="color3" id="color3" />
-        </div>
-        <div>
-          <label htmlFor="color4"> Surface-on </label>
-          <input required type="color" name="color4" id="color4" />
-        </div>
+      <div className="grid">
+        <label htmlFor="theme-name"> Name </label>
+        <input required type="text" name="themeName" id="theme-name" />
+
+        <label htmlFor="color-1"> Primary </label>
+        <input required type="color" name="color1" id="color1" />
+
+        <label htmlFor="color2"> Secondary </label>
+        <input required type="color" name="color2" id="color2" />
+
+        <label htmlFor="color3"> Surface </label>
+        <input required type="color" name="color3" id="color3" />
+
+        <label htmlFor="color4"> Surface-on </label>
+        <input required type="color" name="color4" id="color4" />
       </div>
 
       <button className="addTheme" type="submit">

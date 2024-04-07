@@ -1,10 +1,11 @@
 .theme {
   display: grid;
   gap: 0.5rem;
+  list-style: none;
 }
 
 .theme__title {
-  font-size: 3rem;
+  font-size: 2rem;
   margin: 0;
 }
 
