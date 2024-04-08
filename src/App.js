@@ -2,10 +2,12 @@ import "./App.css";
 import Theme from "./components/theme";
 import { themes as dbThemes } from "./db";
 import { AddTheme } from "./components/AddTheme";
-import { useState } from "react";
+import useLocalStorageState from "use-local-storage-state";
 
 function App() {
-  const [themes, addTheme] = useState(dbThemes);
+  const [themes, addTheme] = useLocalStorageState("themes", {
+    defaultValue: dbThemes,
+  });
 
   console.log("themes", themes);
 
